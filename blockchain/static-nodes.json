@@ -1,0 +1,6 @@
+[
+    "enode://<Node1の公開鍵>@<Node1のIP>:<P2P通信のポート>",
+    "enode://<Node2の公開鍵>@<Node2のIP>:<P2P通信のポート>",
+    "enode://<Node3の公開鍵>@<Node3のIP>:<P2P通信のポート>",
+    "enode://<Node4の公開鍵>@<Node4のIP>:<P2P通信のポート>"
+]

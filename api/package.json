@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "start": "pm2 start ecosystem.config.js",
+    "stop": "pm2 stop ecosystem.config.js",
+    "dev": "node src/app.js"
+  },
+  "dependencies": {
+    "@metamask/eth-sig-util": "^8.1.1",
+    "abi-decoder": "^2.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "express": "^4.21.2",
+    "moment-timezone": "^0.5.46",
+    "mysql2": "^3.12.0",
+    "uuid": "^11.0.5",
+    "web3": "^1.10.0"
+  }
+}

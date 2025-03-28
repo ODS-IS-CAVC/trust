@@ -1,0 +1,24 @@
+---
+services:
+  besu:
+    image: hyperledger/besu:latest
+    container_name: besu-node
+    command: [
+      "--genesis-file=/var/besu/data/genesis.json",
+      "--rpc-http-port=<RPCのポート>",
+      "--rpc-http-enabled",
+      "--rpc-http-api=ETH,NET,QBFT,ADMIN,WEB3",
+      "--data-path=/var/besu/data",
+      "--miner-enabled",
+      "--miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73",
+      "--host-allowlist=all",
+      "--fast-sync-min-peers=3",
+      "--min-gas-price=0",
+      "--static-nodes-file=/var/besu/data/static-nodes.json"]
+    volumes:
+      - ./key.priv:/var/besu/data/key
+      - ./genesis.json:/var/besu/data/genesis.json
+      - ./static-nodes.json:/var/besu/data/static-nodes.json
+    ports:
+      - <P2P通信のポート>:<P2P通信のポート>
+      - <RPCのポート>:<RPCのポート>
